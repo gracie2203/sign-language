@@ -1,0 +1,165 @@
+/* Library Section Styles */
+#library {
+    padding-top: var(--space-8);
+  }
+  
+  #library h2 {
+    color: var(--primary-500);
+    text-align: center;
+  }
+  
+  #library > p {
+    text-align: center;
+    margin-bottom: var(--space-8);
+    color: var(--neutral-600);
+  }
+  
+  /* Alphabet Navigation */
+  .alphabet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+  
+  .alphabet-nav button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid var(--neutral-300);
+    border-radius: 0.375rem;
+    color: var(--neutral-700);
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .alphabet-nav button:hover {
+    background-color: var(--primary-100);
+    border-color: var(--primary-300);
+    color: var(--primary-600);
+    transform: translateY(-2px);
+  }
+  
+  .alphabet-nav button.active {
+    background-color: var(--primary-500);
+    border-color: var(--primary-500);
+    color: white;
+  }
+  
+  /* Search Container */
+  .search-container {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto var(--space-8);
+  }
+  
+  #library-search {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--neutral-300);
+    border-radius: 0.375rem 0 0 0.375rem;
+    font-size: 1rem;
+  }
+  
+  #library-search:focus {
+    outline: none;
+    border-color: var(--primary-400);
+    box-shadow: 0 0 0 3px var(--primary-100);
+  }
+  
+  #library-search-btn {
+    background-color: var(--primary-500);
+    color: white;
+    border-radius: 0 0.375rem 0.375rem 0;
+    padding: var(--space-3) var(--space-4);
+    font-weight: 500;
+  }
+  
+  #library-search-btn:hover {
+    background-color: var(--primary-600);
+  }
+  
+  /* Library Content */
+  .library-content {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: var(--space-6);
+    min-height: 400px;
+  }
+  
+  #letter-display {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--primary-500);
+    margin-bottom: var(--space-6);
+    font-weight: 700;
+  }
+  
+  #sign-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+  }
+  
+  .sign-card {
+    background-color: var(--neutral-100);
+    border-radius: 0.375rem;
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sign-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sign-word {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--neutral-800);
+    margin-bottom: var(--space-2);
+  }
+  
+  .sign-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: var(--space-3);
+    background-color: var(--neutral-200);
+  }
+  
+  .sign-description {
+    font-size: 0.875rem;
+    color: var(--neutral-600);
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: var(--space-8);
+    color: var(--neutral-500);
+  }
+  
+  .empty-state h3 {
+    margin-bottom: var(--space-2);
+    color: var(--neutral-700);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .alphabet-nav button {
+      width: 2rem;
+      height: 2rem;
+    }
+    
+    #sign-list {
+      grid-template-columns: 1fr;
+    }
+  }
